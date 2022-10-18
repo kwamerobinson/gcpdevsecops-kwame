@@ -1,5 +1,5 @@
 FROM httpd
 
-RUN sudo apt update && Upgrade
+RUN apt update && apt Upgrade
 expose 80
 expose 443
