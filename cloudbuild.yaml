@@ -2,7 +2,7 @@ steps:
  - name: 'ubuntu'
    args: [ 'echo','Hi there, this is my first GCP cloudbuild file' ]
    dir: '/etc'
-   args:
-   - '-c'
-   - | 
-     sudo apt update && sudo apt-get -y upgrade
+ #  args:
+ #  - '-c'
+ #  - | 
+ #    sudo apt update && sudo apt-get -y upgrade
