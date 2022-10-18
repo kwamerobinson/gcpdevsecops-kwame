@@ -2,3 +2,4 @@ steps:
  - name: 'ubuntu'
    args: [ 'echo', 'Hi there, this is my first GCP cloudbuild file' ]
    dir: '/etc'
+   
