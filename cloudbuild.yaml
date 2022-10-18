@@ -1,5 +1,4 @@
 steps:
  - name: 'ubuntu'
    args: [ 'echo', 'Hi there, this is my first GCP cloudbuild file' ]
-   env: [ 'CLOUDSDK_COMPUTE_ZONE=europe-west2' ]
    dir: '/etc'
