@@ -1,8 +1,7 @@
-FROM httpd
+FROM tenableofficial/nessus
 
 #RUN apt update && apt Upgrade
-expose 80
-expose 443
+expose 8834
 
 #RUN apt-get -y update
 #RUN apt-get -y upgrade
