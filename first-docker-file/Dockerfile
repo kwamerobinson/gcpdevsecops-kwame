@@ -7,7 +7,7 @@ RUN mkdir -p /var/www/
 #RUN apt update && intstall nano & systemctl
 
 RUN apt update
-RUN apt install nano
+RUN apt install -y nano
 RUN apt install -y systemctl
 
 #add html files, change permns of diretory, and replace httpd.conf 
