@@ -6,7 +6,7 @@ RUN mkdir -p /var/www/
 
 #RUN apt update && intstall nano & systemctl
 
-RUN apt update
+RUN apt update -y
 RUN apt install -y nano
 RUN apt install -y systemctl
 
@@ -28,3 +28,6 @@ expose 80
 #restart apache
 #RUN systemctl restart apache2
 #RUN systemctl start apache2
+
+#Keep docker alive if httpd closes
+CMD [ "tail", "-f", "/dev/null" ]
