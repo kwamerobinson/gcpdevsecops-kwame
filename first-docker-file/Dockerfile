@@ -18,8 +18,8 @@ COPY httpd-vhosts.conf /usr/local/apache2/conf/extra
 
 
 #restart apache
-CMD [ "killall", "httpd" ]
-CMD [ "httpd-foreground ]
+#CMD [ "killall", "httpd" ]
+#CMD [ "httpd-foreground ]
 
 
 #expose the ports needed
