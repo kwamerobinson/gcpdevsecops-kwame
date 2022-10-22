@@ -26,8 +26,10 @@ expose 80
 
 
 #restart apache
-#RUN systemctl restart apache2
-#RUN systemctl start apache2
+RUN killall httpd
+RUN httpd
 
-#Keep docker alive if httpd closes
-CMD [ "tail", "-f", "/dev/null" ]
+###################################
+#Keep docker alive if httpd closes#
+###################################
+CMD [ "tail", "-f", "/dev/null" ]#
