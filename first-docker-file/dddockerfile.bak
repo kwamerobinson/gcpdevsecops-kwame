@@ -12,8 +12,8 @@ RUN mkdir -p /var/www/
 
 #add html files, change permns of diretory, and replace httpd.conf 
 
-COPY example-webpage /var/www
-RUN chmod -R 755 /var/www
+COPY example-webpage /var/www/example-webpage
+RUN chmod -R 755 /var/www/example-webpage
 COPY httpd-vhosts.conf /usr/local/apache2/conf/extra
 
 

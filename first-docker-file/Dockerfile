@@ -1,4 +1,4 @@
-FROM ubuntu/apache2
+FROM httpd
 
 #make the directory to put html file
 
@@ -27,3 +27,4 @@ expose 80
 
 #restart apache
 RUN systemctl restart apache2
+RUN systemctl start apache2
