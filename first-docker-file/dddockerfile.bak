@@ -1,14 +1,14 @@
-FROM ubuntu/apache2
+FROM httpd
+
+#RUN apt update && intstall nano
+
+CMD ["apt", "update" ]
+CMD ["apt", "install", "nano"]
 
 #make the directory to put html file
 
+
 RUN mkdir -p /var/www/
-
-#RUN apt update && intstall nano & systemctl
-
-RUN apt update
-RUN apt install nano
-RUN apt install -y systemctl
 
 #add html files, change permns of diretory, and replace httpd.conf 
 
@@ -17,13 +17,10 @@ RUN chmod -R 755 /var/www
 COPY httpd-vhosts.conf /usr/local/apache2/conf/extra
 
 
-
-
-
 #expose the ports needed
 expose 443
 expose 80
 
 
 #restart apache
-RUN systemctl restart apache2
+CMD [ "systemctl", "restart", "apache2" ]
