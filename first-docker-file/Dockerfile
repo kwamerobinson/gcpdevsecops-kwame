@@ -26,10 +26,11 @@ expose 80
 
 
 #restart apache
-RUN killall httpd
-RUN httpd
+RUN [ "killall", "httpd" ]
+CMD [ "httpd" ]
 
 ###################################
 #Keep docker alive if httpd closes#
 ###################################
+
 CMD [ "tail", "-f", "/dev/null" ]
