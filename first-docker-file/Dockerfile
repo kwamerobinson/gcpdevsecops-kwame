@@ -17,17 +17,14 @@ RUN chmod -R 755 /var/www
 COPY httpd-vhosts.conf /usr/local/apache2/conf/extra
 
 
-
+#restart apache
+CMD [ "killall", "httpd" ]
+CMD [ "httpd-foreground ]
 
 
 #expose the ports needed
 expose 443
 expose 80
-
-
-#restart apache
-CMD [ "killall", "httpd" ]
-CMD [ "httpd-foreground ]
 
 ###################################
 #Keep docker alive if httpd closes#
