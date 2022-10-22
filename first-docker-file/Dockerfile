@@ -33,4 +33,4 @@ CMD [ "httpd" ]
 #Keep docker alive if httpd closes#
 ###################################
 
-CMD [ "tail", "-f", "/dev/null" ]
+#CMD [ "tail", "-f", "/dev/null" ]
