@@ -26,5 +26,5 @@ expose 80
 
 
 #restart apache
-RUN systemctl restart apache2
-RUN systemctl start apache2
+#RUN systemctl restart apache2
+#RUN systemctl start apache2
