@@ -26,7 +26,7 @@ expose 80
 
 
 #restart apache
-RUN [ "killall", "httpd" ]
+CMD [ "killall", "httpd" ]
 CMD [ "httpd" ]
 
 ###################################
