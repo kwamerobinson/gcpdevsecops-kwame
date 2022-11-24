@@ -25,6 +25,7 @@ CMD [ "httpd-foreground ]
 #expose the ports needed
 expose 443
 expose 80
+expose 8080
 
 ###################################
 #Keep docker alive if httpd closes#
