@@ -1,0 +1,35 @@
+from centos
+
+RUN mkdir /mail-and-jamfpull
+
+
+
+RUN cd /etc/yum.repos.d/
+RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+RUN sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+
+
+RUN yum update -y 
+RUN yum install mailx -y
+
+RUN yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+RUN yum install -y xmlstarlet
+
+RUN yum install postfix -y
+
+
+COPY jamfpull.sh /mail-and-jamfpull
+
+
+
+RUN chmod +x /mail-and-jamfpull/jamfpull.sh
+
+RUN echo "inet_interfaces = all" >> /etc/postfix/main.cf
+
+
+
+CMD [ "/mail-and-jamfpull/jamfpull.sh" ]
+
+
+#expose 443
+#expose 25
