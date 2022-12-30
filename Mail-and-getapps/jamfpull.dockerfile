@@ -17,5 +17,5 @@ RUN chmod +x /mall-and-jamfpull/jamfpull.sh
 RUN /mall-and-jamfpull/jamfpull.sh
 
 
-expose 443
-expose 25
+#expose 443
+#expose 25
